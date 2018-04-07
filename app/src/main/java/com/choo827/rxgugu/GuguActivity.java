@@ -35,13 +35,20 @@ public class GuguActivity extends AppCompatActivity {
 
 			@Override
 			public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-				subject.map(dan -> Integer.parseInt(ed.getText().toString()))
+				subject.map(dan -> ed.getText().toString().equals(""))
 						.flatMap(dan -> BehaviorSubject.range(1, 9),
-								(dan, row) -> dan + " * " + row + " = " + (dan * row) + "\n")
+								(dan, row) -> 0 + " x " + row + " = " + 0 + "\n")
 						.scan((x, y) -> x + y)
+						.subscribe(text -> tv.setText(text)).dispose();
+
+				subject.map(dan -> Long.parseLong(ed.getText().toString()))
+						.flatMap(dan -> BehaviorSubject.range(1, 9),
+								(dan, row) -> dan + " x " + row + " = " + (dan * row) + "\n")
+						.scan((x, y) -> x + y)
+//						.reduce((x, y) -> x + y)
 						.doOnNext(data -> Log.d("onNext()", data))
 //						.subscribe(text -> tv.setText(text));
-						.subscribe(text -> tv.setText(text), Throwable::getMessage);
+						.subscribe(text -> tv.setText(text), Throwable::getMessage).dispose();
 			}
 
 			@Override

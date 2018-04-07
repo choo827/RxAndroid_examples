@@ -1,34 +1,35 @@
 package com.choo827.rxgugu;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import com.jakewharton.rxbinding2.widget.RxTextView;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-	EditText ed;
-	TextView tv;
+	Button btn1, btn2, btn3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		ed = findViewById(R.id.ed);
-		tv = findViewById(R.id.tv);
+		btn1 = findViewById(R.id.btn1);
+		btn2 = findViewById(R.id.btn2);
+		btn3 = findViewById(R.id.btn3);
 
-//		disposable = RxTextView.textChanges(ed)
-//				.subscribe(text -> {
-//			tv.setText(text);
-//		});
+		btn1.setOnClickListener(v -> {
+			startActivity(new Intent(MainActivity.this, RxViewActivity.class));
+		});
 
-		RxTextView.textChanges(ed)
-				.subscribe(text -> {
-					tv.setText(text);
-				});
+		btn2.setOnClickListener(view -> {
+			startActivity(new Intent(MainActivity.this, PlusActivity.class));
+		});
+
+		btn3.setOnClickListener(v -> {
+			startActivity(new Intent(MainActivity.this, GuguActivity.class));
+		});
 	}
 }
 

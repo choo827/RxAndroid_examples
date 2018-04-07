@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".PlusActivity">
 
-    <Button
-        android:id="@+id/btn1"
+    <EditText
+        android:id="@+id/ed1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rx_View"/>
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btn2"
+    <EditText
+        android:id="@+id/ed2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rx_plus"/>
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btn3"
+    <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rx_gugudan"/>
+        android:layout_height="fill_parent"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
 
 </LinearLayout>
