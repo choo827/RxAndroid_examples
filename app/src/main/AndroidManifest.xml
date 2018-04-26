@@ -18,9 +18,13 @@
         </activity>
         <activity android:name=".GuguActivity">
         </activity>
-        <activity android:name=".PlusActivity">
-        </activity>
         <activity android:name=".RxViewActivity">
+        </activity>
+        <activity android:name=".KGuguActivity">
+        </activity>
+        <activity android:name=".ColorActivity">
+        </activity>
+        <activity android:name=".LoginActivity">
         </activity>
     </application>
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rxgugu</string>
+    <string name="title_activity_kgugu">KGuguActivity</string>
 </resources>

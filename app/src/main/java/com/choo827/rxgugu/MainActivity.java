@@ -1,6 +1,5 @@
 package com.choo827.rxgugu;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
 		});
 
 		btn2.setOnClickListener(view -> {
-			startActivity(new Intent(MainActivity.this, PlusActivity.class));
+			startActivity(new Intent(MainActivity.this, GuguActivity.class));
 		});
 
 		btn3.setOnClickListener(v -> {
-			startActivity(new Intent(MainActivity.this, GuguActivity.class));
+			startActivity(new Intent(MainActivity.this, LoginActivity.class));
 		});
 	}
 }
